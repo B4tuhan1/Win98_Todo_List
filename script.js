@@ -124,7 +124,8 @@ const bigcontainer = document.querySelector(".todo-list");
             elements.cancel.style.display = "inline-block";
 
             elements.textbox.style.display = "block";
-            elements.textbox.value = elements.span.textContent;
+
+            newOne = elements.span.textContent;
             elements.span.style.display = "none";
         
             elements.cancel.addEventListener("click" , () => {
@@ -143,14 +144,14 @@ const bigcontainer = document.querySelector(".todo-list");
 
                 const oldOne = elements.span.textContent;
                 const newOne = elements.textbox.value.trim(); 
-                
+
+
                 elements.edit.style.display = "inline-block";
                 elements.dlt.style.display = "inline-block";
                 elements.check.style.display = "none";
                 elements.cancel.style.display = "none";
 
                 editStorage(oldOne, newOne);
-                
                 elements.span.textContent= elements.textbox.value;
                 elements.textbox.style.display = "none";
                 elements.span.style.display="block";
@@ -163,7 +164,7 @@ const bigcontainer = document.querySelector(".todo-list");
     function editStorage(oldOne, newOne) {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-
+    // Her bir todo'yu gez
     const updatedTodos = todos.map(todo => {
         if (todo === oldOne) {
             return newOne;
@@ -176,7 +177,7 @@ const bigcontainer = document.querySelector(".todo-list");
 }
 
 
-function getTodosFromStorage(){
+    function getTodosFromStorage(){
     let todos
 
     if (localStorage.getItem("todos") === null)
