@@ -1,0 +1,210 @@
+*{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    font-weight: lighter;
+}
+
+body{
+    background-color: #008080;
+    
+}
+
+h1{
+    
+    color: white;
+    font-size: 2rem;
+    background-color: #000080;
+    margin-bottom: 1rem;
+}
+
+
+#todo-form{
+    
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    margin: 0 auto;
+    border: 2px solid white;
+    background-color: #C0C7C8;
+    padding: 0.3rem;
+    border-top: #fff solid 2px;
+    border-left: #fff solid 2px;
+    border-bottom: #000 solid 2px;
+    border-right: #000 solid 2px;
+}
+
+.todo-container input[type="text"]{
+    width: 60%;
+    padding: 0.4rem;
+    border: none;
+    margin-bottom: 1.875rem;
+    font-size: 1.3rem;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #d5d8d8;
+    border-right: 3px solid #d5d8d8;
+}
+
+
+.todo-container input[type="text"]:focus{
+    outline: none;
+
+}
+
+
+.todo-container button{
+    width: 15%;
+    border: none;
+    margin-bottom: 10px;
+    border-top: 2px solid #d5d8d8;
+    border-left: 2px solid #d5d8d8;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    font-size: 1.2rem;
+    display: block;
+    margin-left: auto;
+    background-color: #C0C7C8;
+    
+}
+
+.todo-container button:active{
+
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #d5d8d8;
+    border-right: 2px solid #d5d8d8;
+}
+
+
+
+.todo-list-container{
+    margin: 4rem auto 0 auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;    
+    background-color: #C0C7C8;
+    border-top: #fff solid 2px;
+    border-left: #fff solid 2px;
+    border-bottom: #000 solid 2px;
+    border-right: #000 solid 2px;
+
+}
+
+.todo-list-container #search-todo{
+    width: 60%;
+    color: black;
+    font-size: 1.3rem;
+    background-color: #fff;
+    margin: 0.5rem;
+    padding: 0.4rem;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #d5d8d8;
+    border-right: 3px solid #d5d8d8;
+
+}
+
+
+
+.todo-list-container ul{
+    max-height: 31.25rem;
+    overflow-y: auto;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-top: 2px dotted black;
+    background-color: #C0C7C8;
+    
+    
+}
+
+
+
+.todo-list-container li { 
+    color: white;
+    list-style: none;
+    padding: 0.3rem;
+    margin: 1rem;
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid #d5d8d8;
+    border-left: 3px solid #d5d8d8;
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+    
+}
+
+.todo-list-container li span { 
+    color: black;
+    font-size: 1.2rem;
+}
+
+
+.dlt-todo, .edit-todo, .check-todo, .cancel-todo {
+    background-color: #C0C7C8;
+    color: black;
+    cursor: pointer;
+    border: 2px solid white;
+    border-top: 2px solid #d5d8d8;
+    border-left: 2px solid #d5d8d8;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.dlt-todo:hover, .edit-todo:hover, .check-todo:hover, .cancel-todo:hover{
+    background-color: #C0C7C8;
+    color: black;
+    cursor: pointer;
+    
+}
+
+img {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+.edit-input{
+    padding: 0.4rem;
+    border: none;
+    font-size: 1.3rem;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #d5d8d8;
+    border-right: 3px solid #d5d8d8;
+
+}
+
+.delete-all{
+    background-color: #C0C7C8;
+    width: 30%;
+    border: none;
+    margin-bottom: 10px;
+    border-top: 2px solid #d5d8d8;
+    border-left: 2px solid #d5d8d8;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    font-size: 1.2rem;
+    display: block;
+    margin: 0 0.5rem 0.5rem auto;
+
+}
+
+.delete-all img{
+    max-width: 1.2rem;
+    max-height: 1.2rem;
+
+}
+
+.delete-all:hover {
+    cursor: pointer;
+}

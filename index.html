@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+
+
+    <div class="todo-container"> 
+
+    <form id="todo-form">
+        
+        <h1>📝 Todo List</h1>
+        <input type="text" id="todo-input" placeholder="Add a new todo" >
+        <button type="button" id="add-todo" class="add-todo-btn">Add Todo</button>
+
+    </form>
+    </div>
+
+    <div class="todo-list-container">   
+     
+
+
+        <input type="text" name="search" id="search-todo" placeholder="Search todo">
+
+
+
+        <ul class="todo-list">
+
+
+            <template class="todo-temp">
+            <li class="todo-item" style="display: none;"> <span>Sample Todo 1</span>
+                
+                <input type="text" name="edit-input" class="edit-input" style="display: none;">
+
+                <div class="todo-buttons">
+                    <button class="cancel-todo" style="display: none;"><img src="trust1_restrict-0.png" alt="" class="cancel"></button>
+                    <button class="check-todo" style="display: none;"><img src="check-0.png" alt="" class="check"></button>
+                    <button class="edit-todo"><img src="write_file-1.png" alt="" class="edit"></button>
+                    <button class="dlt-todo"><img src="recycle_bin_empty_cool-0.png" alt="" class="dlt"></button>
+                </div>
+        
+            </li>
+            </template>
+
+        </ul>
+
+        <button class="delete-all"><img src="game_mine_1-0.png" alt=""> Tüm Todoları Sil</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
