@@ -141,11 +141,16 @@ const bigcontainer = document.querySelector(".todo-list");
 
             elements.check.addEventListener("click" , () => {
 
+                const oldOne = elements.span.textContent;
+                const newOne = elements.textbox.value.trim(); 
+                
                 elements.edit.style.display = "inline-block";
                 elements.dlt.style.display = "inline-block";
                 elements.check.style.display = "none";
                 elements.cancel.style.display = "none";
 
+                editStorage(oldOne, newOne);
+                
                 elements.span.textContent= elements.textbox.value;
                 elements.textbox.style.display = "none";
                 elements.span.style.display="block";
@@ -154,6 +159,22 @@ const bigcontainer = document.querySelector(".todo-list");
         } 
 
     });
+
+    function editStorage(oldOne, newOne) {
+    let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+
+    const updatedTodos = todos.map(todo => {
+        if (todo === oldOne) {
+            return newOne;
+        }
+        return todo;
+    });
+
+
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+}
+
 
 function getTodosFromStorage(){
     let todos
