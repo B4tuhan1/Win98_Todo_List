@@ -152,7 +152,7 @@ const bigcontainer = document.querySelector(".todo-list");
                 elements.cancel.style.display = "none";
 
                 editStorage(oldOne, newOne);
-                elements.span.textContent= elements.textbox.value;
+                elements.span.textContent= newOne;
                 elements.textbox.style.display = "none";
                 elements.span.style.display="block";
 
@@ -164,7 +164,6 @@ const bigcontainer = document.querySelector(".todo-list");
     function editStorage(oldOne, newOne) {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-    // Her bir todo'yu gez
     const updatedTodos = todos.map(todo => {
         if (todo === oldOne) {
             return newOne;
